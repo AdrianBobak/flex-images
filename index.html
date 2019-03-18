@@ -4,6 +4,73 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Test</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .container {
+        width: 100%;
+        padding: 0 10% 0 10%;
+    }
+    .row {
+        width: 100%;
+        display: flex;
+    }
+    .grid {
+        display: flex;
+    }
+    .flex1 {
+        flex: 1;
+    }
+    .flex2 {
+        flex: 2;
+    }
+    .big {
+        height: 600px;
+        display: flex;
+        flex: 1;
+    }
+    .small {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        min-height: 300px;
+    }
+    .mid {
+        height: 300px;
+        display: flex;
+        flex: 1;
+    }
+    .image-container {
+        background: pink;
+        flex: 1;
+        margin: 20px;
+    }
+    @media (max-width: 999px){
+        .row {
+            flex-direction: column;
+        }
+        .small {
+            flex-direction: row;
+        }
+    }
+    @media (max-width: 699px){
+        .big {
+            height: 300px;
+        }
+        .small {
+            margin-top: 40px;
+        }
+        .small, .mid {
+            flex-direction: column;
+        }
+        .image-container {
+            min-height: 300px;
+        }
+    }
+</style>
 </head>
 <body>
     <div class="container">
